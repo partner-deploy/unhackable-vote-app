@@ -144,6 +144,7 @@ spec:
       containers:
       - name: voteapp-result
         image: gabelacework/voteapp-results-site
+        readOnlyRootFilesystem: true
         imagePullPolicy: Always
         env:
         - name: DATABASE_HOST
@@ -193,6 +194,7 @@ spec:
       containers:
       - name: voteapp-vote
         image: gabelacework/voteapp-website
+        readOnlyRootFilesystem: true
         imagePullPolicy: Always
         securityContext:
           privileged: true
